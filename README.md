@@ -38,60 +38,62 @@ The majority of the questions were plucked from an [oksoclap](http://oksoclap.co
 ####<a name='general'>General Questions:</a>
 
 * What did you learn yesterday/this week?
-- Depends on person
- Me: vertical align by line-height
+ Using Levenstein algorithm and fuzzy search for finding similar routes(or geometric objects).
 
 * What excites or interests you about coding?
-- Depends on person
- Me: I like bring life to interfaces
+ I am thrilled about singularity point of AI. I think each programmer is being a part of it by solving daily problems with programming.
 
 * Talk about your preferred development environment. (OS, Editor, Browsers, Tools etc.)
-Windows (because of IE), webstorm, chrome, terminal
+  Mac OS X, Firefox Developer Edition, Firebug, Sublime Text, Fish Shell, Git, Slack, Dash, Photoshop
 
 * Can you describe your workflow when you create a web page?
-Write html -> add css -> add JS
-Run web storm and chrome
+  Build html skeleton using a css framework like bootstrap or purecss. Create base template. Templating might be at backend or frontend depending on the project. Inherit pages using base template. Don't Repeat Yourself.
+  Choose the right javascript libraries for the project. It would choose Reactjs for performance and speed or Angularjs for the easy development of complex flows or Knockoutjs for its simplicity.
+
 
 * Can you describe the difference between progressive enhancement and graceful degradation?
-progressive enhancement - from less functionality growing to full functional
-graceful degradation - made full functional and then made fallbacks
-  * Bonus points for describing feature detection
-    check is feture is exist, use fallback if not
+  progressive enhancement - from less functionality growing to full functional
+  graceful degradation - made full functional and then made fallbacks
+
 * Explain what "Semantic HTML" means.
- Html consist of only of information, all styling is on css
+  Making html more meaningful and semantic by avoiding presentational tags and inline css, seperating content and styling. Semantic html helps agents(robots) to understand the content.
+
 * How would you optimize a websites assets/resources?
-  Minimize Http calls,
-  Use cdn,
-  Set expires headers
-  Use gzip
-  Put css on top
-  Put scripts on bottom
-  Make Javascript and css external
-  Minify Javascript and css
-  avoid redirects
-  reduce dom size
-  dont scale images on client
+  Bundle css and js files into one file for minimizing http calls
+  Minimize css and js by using tools like uglify, yui compressor and closure compiler.
+  Minimize size of images by using tools like Google PageSpeed and optipng
+  Use sprites or fonts for icons and images
+  Use cdn
+
+  For these operations I used different tools depending on environment and framework.
+  * I used django-compressor, bower, cssmin, jsmin, yui-compressor when I'm using python django.
+  * Sbt plugins like sbt-uglify, sbt-concat, cssCompress, webjars, digest and gzip with Scala.
+  * I also used Gruntjs closure compiler, less, uglify, cssmin with nodejs.
 
 
 * Why is it better to serve site assets from multiple domains?
-  * How many resources will a browser download from a given domain at a time?
-  depends on browser
-  2 - 8
+  Http 1.1 limits the number of simultaneous connections per domain.
+
 * Name 3 ways to decrease page load. (perceived or actual load time)
+  Reduce http calls by minimizing and bundling css and js
+  Compress static content with gzip
+  Put javascript to the bottom and load them async.
+  Optimize images
+  Ask to YSlow
+
 * If you jumped on a project and they used tabs and you used spaces, what would you do?
-  * Suggest the project utilize something like EditorConfig (http://editorconfig.org)
-  * Conform to the conventions (stay consistent)
-  * `issue :retab! command`
-  Me: change settings in my IDE
-* Write a simple slideshow page
-  * Bonus points if it does not use JS.
+  I conform to the conventions. I already use modular configurations on my editor for each project.
+
 * What tools do you use to test your code's performance?
-  * Profiler, JSPerf, Dromaeo
+  YSlow, Profiler, JSPerf, Dromaeo
   Google dev tools
+
 * If you could master one technology this year, what would it be?
-  Advanced algorithm's
+  Nosql databases, Reactive UI Development, Polymorphic Javascript
+
 * Explain the importance of standards and standards bodies.
   Without standarts you cant be sure that you code or design works as you expect to.
+
 * What is FOUC? How do you avoid FOUC?
   Flash of unstyled content. Put css in head. You can also made loader (but i did not like it)
 
@@ -172,7 +174,7 @@ QUnit Jasmine and bunch of staff
 * AMD vs. CommonJS?
 * What's a hashtable?
 datasctructure
-* Explain why the following doesn't work as an IIFE: `function foo(){ }();`. 
+* Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   * What needs to be changed to properly make it an IIFE?
 * What's the difference between a variable that is: `null`, `undefined` or `undeclared`?
   * How would you go about checking for any of these states?
